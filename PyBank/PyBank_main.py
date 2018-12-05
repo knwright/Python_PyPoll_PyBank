@@ -59,7 +59,29 @@ with open(budget_data, newline="") as csvfile:
 
  
 # Export results as csv file.
+# Specify the file to write to
+output_path = os.path.join("..", "Homework3", "Financial_Analysis.csv")
 
+# Open the file using "write" mode. Specify the variable to hold the contents
+with open(output_path, 'w', newline='') as csvfile:
+
+    # Initialize csv.writer
+    csvwriter = csv.writer(csvfile, delimiter=',')
+
+    # Write the first row
+    csvwriter.writerow(['Total Months:', month_count])
+
+    #Write the second row
+    csvwriter.writerow(['Total:', '${:.0f}'.format(total)])
+
+    # Write the third row
+    csvwriter.writerow(['Average Change:', '${:.0f}'.format((total_change)/(month_count-1))])
+
+    #Write the fourth row
+    csvwriter.writerow(['Greatest Increase in Profit:', greatest_incr_mo, '${:.2f}'.format(greatest_increase)])
+
+    # Write the fifth row
+    csvwriter.writerow(['Greatest Decrease in Profit:', greatest_decr_mo, '${:.2f}'.format(greatest_decrease)])
 
    
 
