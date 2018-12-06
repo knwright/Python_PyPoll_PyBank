@@ -58,30 +58,19 @@ with open(budget_data, newline="") as csvfile:
    print(f"Greatest Decrease in Profits:", greatest_decr_mo, '${:.2f}'.format(greatest_decrease))
 
  
-# Export results as csv file.
+# Export results as txt file.
 # Specify the file to write to
 output_path = os.path.join("..", "Homework3", "Financial_Analysis.csv")
 
 # Open the file using "write" mode. Specify the variable to hold the contents
-with open(output_path, 'w', newline='') as csvfile:
+file = open("Financial_Analysis.txt", "w")
 
-    # Initialize csv.writer
-    csvwriter = csv.writer(csvfile, delimiter=',')
+file.write("Financial Analysis \n")
+file.write("----------------------------- \n")
+file.write("Total Months: 86 \n")
+file.write("Total: $38382578 \n")
+file.write("Average Change: $-2315.12 \n")
+file.write("Greatest Increase in Profits: Feb-2012 $1926159.00 \n")
+file.write("Greatest Decrease in Profits: Sep-2013 $-2196167.00 \n")
 
-    # Write the first row
-    csvwriter.writerow(['Total Months:', month_count])
-
-    #Write the second row
-    csvwriter.writerow(['Total:', '${:.0f}'.format(total)])
-
-    # Write the third row
-    csvwriter.writerow(['Average Change:', '${:.0f}'.format((total_change)/(month_count-1))])
-
-    #Write the fourth row
-    csvwriter.writerow(['Greatest Increase in Profit:', greatest_incr_mo, '${:.2f}'.format(greatest_increase)])
-
-    # Write the fifth row
-    csvwriter.writerow(['Greatest Decrease in Profit:', greatest_decr_mo, '${:.2f}'.format(greatest_decrease)])
-
-   
-
+file.close()
