@@ -48,29 +48,16 @@ with open(budget_data, newline="") as csvfile:
          greatest_decrease = pl_change
          greatest_decr_mo = row[0]
 
-   # Indentation is important here to prevent the loop from print the values for each row
-   print("Financial Analysis")
-   print("-----------------------")
-   print(f"Total Months: ", month_count)
-   print(f"Total: ", '${:.0f}'.format(total))
-   print(f"Average Change: ", '${:.2f}'.format((total_change)/(month_count-1)))
-   print(f"Greatest Increase in Profits:", greatest_incr_mo, '${:.2f}'.format(greatest_increase))
-   print(f"Greatest Decrease in Profits:", greatest_decr_mo, '${:.2f}'.format(greatest_decrease))
-
- 
-# Export results as txt file.
+# Export results to txt file
 # Specify the file to write to
-output_path = os.path.join("..", "Homework3", "Financial_Analysis.csv")
+output_file = os.path.join("..", "Homework3", "Financial_Analysis.txt")
 
-# Open the file using "write" mode. Specify the variable to hold the contents
-file = open("Financial_Analysis.txt", "w")
+with open(output_file, 'w') as txtfile:
+   txtfile.writelines('Financial Analysis \n------------------------- \nTotal Months: ' + str(month_count) 
+   + '\nTotal: ' + '${:.0f}'.format(total) + '\nAverage Change: ' + '${:.2f}'.format((total_change)/(month_count-1))
+   + '\nGreatest Increase in Profits: ' + str(greatest_incr_mo) + ' ${:.2f}'.format(greatest_increase) +
+   '\nGreatest Decrease in Profits: ' + str(greatest_decr_mo) + ' ${:.2f}'.format(greatest_decrease))
 
-file.write("Financial Analysis \n")
-file.write("----------------------------- \n")
-file.write("Total Months: 86 \n")
-file.write("Total: $38382578 \n")
-file.write("Average Change: $-2315.12 \n")
-file.write("Greatest Increase in Profits: Feb-2012 $1926159.00 \n")
-file.write("Greatest Decrease in Profits: Sep-2013 $-2196167.00 \n")
-
-file.close()
+# Prints file to terminal
+with open(output_file, 'r') as readfile:
+   print(readfile.read())
