@@ -16,7 +16,7 @@ greatest_decr_mo = 0
 
 
 # Open the csv file
-with open(budget_data, newline="") as csvfile:
+with open(budget_data) as csvfile:
    csvreader = csv.reader(csvfile, delimiter=",")
    
    # Check for a header, if present, skip on to the next row.

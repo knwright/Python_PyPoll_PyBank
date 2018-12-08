@@ -13,7 +13,7 @@ vote_percent = []
 winner_list = []
 
 # Open the csv file
-with open(election_data, newline="") as csvfile:
+with open(election_data) as csvfile:
    csvreader = csv.reader(csvfile, delimiter=",")
   
    # Checks for header and skips it.
