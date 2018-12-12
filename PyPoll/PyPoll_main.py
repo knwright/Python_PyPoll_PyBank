@@ -2,7 +2,7 @@
 import os, csv
 
 # Set path for file
-election_data = os.path.join("..", "Homework3", "election_data.csv")
+election_data = os.path.join("election_data.csv")
 
 # Define necessary variables for calculations
 total_votes = 0
@@ -56,7 +56,7 @@ winner = winner_list[0]
 
 # Export results as txt file.
 # Specify the file to write to
-output_file = os.path.join("..", "Homework3", "Election_Results.txt")
+output_file = os.path.join("Election_Results.txt")
 
 with open(output_file, 'w') as txtfile:
    txtfile.writelines('Election Results \n------------------------- \nTotal Votes: ' + str(total_votes) 

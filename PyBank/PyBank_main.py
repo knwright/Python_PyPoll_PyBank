@@ -2,7 +2,7 @@
 import os, csv
 
 # Set path for file
-budget_data = os.path.join("..", "Homework3", "budget_data.csv")
+budget_data = os.path.join("budget_data.csv")
 
 # Define necessary variables for calculations
 month_count = 0
@@ -50,7 +50,7 @@ with open(budget_data) as csvfile:
 
 # Export results to txt file
 # Specify the file to write to
-output_file = os.path.join("..", "Homework3", "Financial_Analysis.txt")
+output_file = os.path.join("Financial_Analysis.txt")
 
 with open(output_file, 'w') as txtfile:
    txtfile.writelines('Financial Analysis \n------------------------- \nTotal Months: ' + str(month_count) 
