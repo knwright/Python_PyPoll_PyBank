@@ -1,5 +1,38 @@
 # python-challenge
 
-Python Homework 3 assignments.
+## PyBank
 
-Include .csv files, .txt files and python scripts for PyBank & PyPoll.
+In this project, I was tasked with creating a Python script for analyzing the financial records of a company. Given a set of financial data called, composed of two columns: `Date` and `Profit/Losses`.
+
+The task was to create a Python script that analyzed the records to calculate each of the following:
+
+  * The total number of months included in the dataset
+
+  * The total net amount of "Profit/Losses" over the entire period
+
+  * The average change in "Profit/Losses" between months over the entire period
+
+  * The greatest increase in profits (date and amount) over the entire period
+
+  * The greatest decrease in losses (date and amount) over the entire period
+
+The final script prints the analysis to the terminal and export a text file with the results.
+
+## PyPoll
+
+In this project, I was tasked with helping a small, rural town modernize its vote-counting process.
+
+Given a set of poll data, composed of three columns: `Voter ID`, `County`, and `Candidate`. The task was to create a Python script that analyzed the votes and calculates each of the following:
+
+  * The total number of votes cast
+
+  * A complete list of candidates who received votes
+
+  * The percentage of votes each candidate won
+
+  * The total number of votes each candidate won
+
+  * The winner of the election based on popular vote.
+
+The final script prints the analysis to the terminal and export a text file with the results.
+
